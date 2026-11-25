@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t satyamummidi/emailservice:latest ."
+                        sh "docker build -t satyamummidi/myrepo:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push satyamummidi/emailservice:latest "
+                        sh "docker push satyamummidi/myrepo:latest "
                     }
                 }
             }
